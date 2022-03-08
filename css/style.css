@@ -678,7 +678,6 @@ header .banner {
 .footer-part-3 {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid red;
   justify-content: space-evenly;
   font-weight: 500;
   font-size: 14px;
