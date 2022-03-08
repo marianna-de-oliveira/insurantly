@@ -581,13 +581,13 @@ header .banner {
   background-color: #23a6f0;
   color: var(--white);
   border-radius: 5px;
+  border: 1px solid #23a6f0;
   transition: 0.3s ease-in-out;
 }
 
 .appointment-container form button:hover {
   background-color: var(--white);
   color: #23a6f0;
-  border: 1px solid #23a6f0;
   font-weight: 700;
   cursor:pointer;
 }
