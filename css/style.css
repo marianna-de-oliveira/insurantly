@@ -541,7 +541,6 @@ header .banner {
 .form-appointment {
   padding: 5px;
   width: 600px;
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -590,6 +589,7 @@ header .banner {
   color: #23a6f0;
   border: 1px solid #23a6f0;
   font-weight: 700;
+  cursor:pointer;
 }
 
 /* END 6TH PART */
@@ -638,7 +638,7 @@ header .banner {
 .footer-part-1 button:hover {
   background-color: var(--white);
   color: #23a6f0;
-
+  cursor:pointer;
   font-weight: 700;
 }
 
