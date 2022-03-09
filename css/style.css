@@ -13,13 +13,6 @@ html {
 }
 
 /* FIRST PART */
-/* HAMBURGER */
-.hamburger-menu {
-  width: 35px;
-  height: 35px;
-  display: none;
-}
-/* HAMBURGER FIM */
 
 .home-logo-menu-login-member {
   max-width: 1440px;
@@ -140,7 +133,6 @@ header .banner {
 
 .banner-text {
   max-width: 500px;
-  border: 1px solid red;
   margin-left: 25px;
 }
 
@@ -354,19 +346,19 @@ header .banner {
 }
 
 .project1 {
-  background-image: url(../img/post1.jpg);
+  background-image: url(img/post1.jpg);
 }
 
 .project2 {
-  background-image: url(../img/post2.jpg);
+  background-image: url(img/post2.jpg);
 }
 
 .project3 {
-  background-image: url(../img/post3.jpg);
+  background-image: url(img/post3.jpg);
 }
 
 .project4 {
-  background-image: url(../img/post4.jpg);
+  background-image: url(img/post4.jpg);
 }
 
 .degrade {
@@ -542,7 +534,7 @@ header .banner {
 
 .background-appointment {
   width: 100%;
-  background-image: url(../img/bg-down.svg);
+  background-image: url(img/bg-down.svg);
 
   background-position: center;
   background-repeat: no-repeat;
