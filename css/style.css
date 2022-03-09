@@ -1,10 +1,17 @@
 :root {
-  --white: #fff;
   --blue-button: #23a6f0;
+  --dark-background: #252b42;
+  --light-blue-background: #8ec2f2;
+  --white-background: #f4f4f4;
+  --light-text: #737373;
+  --orange-circle: #e77c40;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* FIRST PART */
-
 /* HAMBURGER */
 .hamburger-menu {
   width: 35px;
@@ -15,12 +22,11 @@
 
 .home-logo-menu-login-member {
   max-width: 1440px;
-  height: 100px;
+  height: 10vh;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; /* mobile deixar tudo alinhado ao centro */
 }
 
 header {
@@ -33,7 +39,6 @@ header {
 
 .background-image-degrade {
   max-width: 100%;
-  /*height: 600px;*/
   position: relative;
   inset: 0 0 0 0;
   background: linear-gradient(
@@ -45,28 +50,48 @@ header {
 }
 
 header a {
-  color: var(--white);
+  color: var(--white-background);
 }
 
 header .header-logo a {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
-  letter-spacing: 0.1px;
+  letter-spacing: 2px;
 }
 
 header .header-menu a,
 header .header-login-member a {
-  font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 header .header-menu {
-  width: 280px;
-  height: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+}
+header .header-menu li {
+  width: 80px;
+  text-align: center;
+  margin: 0 20px;
+  transition: all 0.3s ease-in-out;
+}
+header .header-menu li:hover {
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 35px;
+  height: 3px;
+  background-color: var(--blue-button);
+  margin: 5px;
+  transition: all 0.5s ease;
 }
 
 header .header-login-member {
@@ -91,31 +116,25 @@ header .header-login-member a:last-child {
 }
 
 header .header-login-member a:last-child:hover {
-  color: #23a6f0;
-  border: 1px solid #23a6f0;
-  background-color: var(--white);
-}
-
-header .header-login-member a img {
-  /* tamanho dos icones */
-  width: 12px;
-  height: 10px;
+  color: var(--blue-button);
+  border: 1px solid var(--blue-button);
+  background-color: var(--white-background);
 }
 
 header .banner {
   max-width: 1100px;
-  height: 500px;
+  min-height: 500px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 50px;
+  /*padding: 50px;*/
 }
 
 .banner-buttons,
 .banner-text {
-  color: var(--white);
+  color: var(--white-background);
 }
 
 .banner-text {
@@ -138,7 +157,7 @@ header .banner {
 .banner-buttons a {
   display: inline-block;
   padding: 15px 36px;
-  color: var(--white);
+  color: var(--white-background);
   border-radius: 50px;
   font-weight: 700;
   font-size: 14px;
@@ -147,16 +166,17 @@ header .banner {
 }
 
 .banner-buttons a:hover {
-  color: #23a6f0;
-  border: 1px solid #23a6f0;
-  background-color: var(--white);
+  color: var(--blue-button);
+  border: 1px solid var(--blue-button);
+  background-color: var(--white-background);
 }
 
 .banner-buttons .button-get {
   margin-right: 10px;
+  border: 1px solid var(--blue-button);
 }
 .banner-buttons .button-learn {
-  border: 1px solid var(--white);
+  border: 1px solid var(--white-background);
   background: transparent;
 }
 
@@ -173,7 +193,7 @@ header .banner {
 
 .benefits,
 .product {
-  background-color: #252b42;
+  background-color: var(--dark-background);
 }
 
 .benefits-sections,
@@ -181,7 +201,7 @@ header .banner {
   width: 1050px;
   display: flex;
   flex-wrap: wrap;
-  margin: 50px auto;
+  margin: 35px auto;
 }
 
 .benefits-img-title-desc {
@@ -198,7 +218,7 @@ header .banner {
 
 .benefits-img-title-desc h3,
 .benefits-img-title-desc p {
-  color: var(--white);
+  color: var(--white-background);
 }
 
 .benefits-img-title-desc h3 {
@@ -219,14 +239,14 @@ header .banner {
 
 /* START THIRD PART */
 .industry {
-  background-color: #8ec2f2;
+  background-color: var(--light-blue-background);
 }
 
 .industry-sections .text {
   max-width: 500px;
   text-align: center;
   margin: 30px auto;
-  color: var(--white);
+  color: var(--white-background);
 }
 
 .industry-sections .text h2 {
@@ -250,7 +270,7 @@ header .banner {
   margin: 30px;
   padding: 45px;
   position: relative;
-  background-color: whitesmoke;
+  background-color: var(--white-background);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -259,15 +279,15 @@ header .banner {
 .feedback-box p::selection,
 .feedback-box span::selection,
 .feedback-box h3::selection {
-  color: var(--white);
-  background-color: #252b42;
+  color: var(--white-background);
+  background-color: var(--dark-background);
 }
 
 .feedback-box .circle {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: black;
+  background-color: var(--orange-circle);
   position: absolute;
   top: 25px;
   left: -35px;
@@ -292,7 +312,7 @@ header .banner {
 .pricing-container .pricing-text {
   max-width: 500px;
   margin: 75px auto;
-  color: var(--white);
+  color: var(--white-background);
   text-align: center;
 }
 
@@ -325,25 +345,25 @@ header .banner {
   height: 452px;
   display: flex;
   flex-direction: column-reverse;
-  color: var(--white);
+  color: var(--white-background);
   border-radius: 5px;
   transition: 0.4s ease-in-out;
 }
 
 .project1 {
-  background-image: url(../img/post1.jpg);
+  background-image: url(img/post1.jpg);
 }
 
 .project2 {
-  background-image: url(../img/post2.jpg);
+  background-image: url(img/post2.jpg);
 }
 
 .project3 {
-  background-image: url(../img/post3.jpg);
+  background-image: url(img/post3.jpg);
 }
 
 .project4 {
-  background-image: url(../img/post4.jpg);
+  background-image: url(img/post4.jpg);
 }
 
 .degrade {
@@ -394,8 +414,8 @@ header .banner {
   height: 42px;
   padding: 10px 36px;
   border-radius: 50px;
-  color: var(--white);
-  background: #23a6f0;
+  color: var(--white-background);
+  background: var(--blue-button);
   transition: 0.2s ease-in-out;
   text-align: center;
 }
@@ -406,9 +426,9 @@ header .banner {
 }
 
 .view-project a:hover {
-  color: #23a6f0;
-  border: 1px solid #23a6f0;
-  background-color: var(--white);
+  color: var(--blue-button);
+  border: 1px solid var(--blue-button);
+  background-color: var(--white-background);
 }
 
 /* END FOURTH PART */
@@ -416,7 +436,7 @@ header .banner {
 /* START 5TH PART */
 
 .pricing {
-  background-color: #252b42;
+  background-color: var(--dark-background);
 }
 
 .pricing-container {
@@ -434,39 +454,39 @@ header .banner {
 }
 
 .container-packages .white-container {
-  background-color: whitesmoke;
-  width: 330px;
-  height: 700px;
+  background-color: var(--white-background);
+  max-width: 330px;
+  /*height: 700px;*/
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
-  padding: 15px;
+  padding: 35px 15px;
   position: relative;
-  margin: 50px auto;
+  margin: 35px auto;
 }
 
 .white-container h2 {
-  color: #252b42;
+  color: var(--dark-background);
   font-size: 24px;
   line-height: 32px;
-  margin: 35px 0;
+  margin-bottom: 35px;
 }
 
 .white-container p {
   color: #737373;
   font-size: 16px;
   line-height: 24px;
-  margin: 35px 0;
+  margin-bottom: 35px;
 }
 
 .white-container h3 {
-  color: #23a6f0;
+  color: var(--blue-button);
   font-size: 40px;
   line-height: 57px;
 }
 
 .white-container span {
-  color: #8ec2f2;
+  color: var(--light-blue-background);
   font-size: 16px;
   line-height: 24px;
 }
@@ -475,28 +495,28 @@ header .banner {
   display: inline-block;
   width: 250px;
   height: 50px;
-  background-color: #23a6f0;
+  background-color: var(--blue-button);
   border-radius: 5px;
   margin: 35px 0;
   line-height: 50px;
-  color: var(--white);
+  color: var(--white-background);
   transition: 0.3s ease-in-out;
 }
 
 .white-container a:hover {
-  border: 2px solid #23a6f0;
-  color: #23a6f0;
-  background-color: var(--white);
+  border: 2px solid var(--blue-button);
+  color: var(--blue-button);
+  background-color: var(--white-background);
 }
 
 .silver .orange-circle {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background-color: #e77c40;
+  background-color: var(--orange-circle);
   text-align: center;
   line-height: 90px;
-  color: var(--white);
+  color: var(--white-background);
   position: absolute;
   top: -50px;
   right: 25px;
@@ -519,18 +539,17 @@ header .banner {
 
 .background-appointment {
   width: 100%;
-  background-image: url(../img/bg-down.svg);
-  height: 700px;
+  background-image: url(img/bg-down.svg);
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #252b42;
+  color: var(--dark-background);
   position: relative;
 }
 
 .appointment-container {
   max-width: 1050px;
-  height: 700px;
 
   display: flex;
   flex-direction: column;
@@ -549,12 +568,14 @@ header .banner {
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
+  padding-top: 30px;
 }
 
 .appointment-container h1 {
   font-size: 40px;
   line-height: 57px;
   font-weight: 700;
+  padding-bottom: 30px;
 }
 
 .appointment-container form input,
@@ -578,18 +599,17 @@ header .banner {
   margin: 40px 10px;
   width: 225px;
   height: 50px;
-  background-color: #23a6f0;
-  color: var(--white);
+  background-color: var(--blue-button);
+  color: var(--white-background);
   border-radius: 5px;
-  border: 1px solid #23a6f0;
   transition: 0.3s ease-in-out;
 }
 
 .appointment-container form button:hover {
-  background-color: var(--white);
-  color: #23a6f0;
+  background-color: var(--white-background);
+  color: var(--blue-button);
+  border: 1px solid var(--blue-button);
   font-weight: 700;
-  cursor:pointer;
 }
 
 /* END 6TH PART */
@@ -612,37 +632,37 @@ header .banner {
 .footer-part-1 h2 {
   font-size: 24px;
   line-height: 32px;
-  color: #252b42;
+  color: var(--dark-background);
 }
 
 .footer-part-1 p {
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-  color: #737373;
+  color: var(--light-text);
 }
 
 .footer-part-1 button {
   width: 160px;
   height: 50px;
   margin: 10px 0;
-  background-color: #23a6f0;
-  color: var(--white);
+  background-color: var(--blue-button);
+  color: var(--white-background);
   font-weight: 700;
-  border: 1px solid #23a6f0;
+  border: 1px solid var(--blue-button);
   border-radius: 5px;
   transition: 0.3s ease-in-out;
 }
 
 .footer-part-1 button:hover {
-  background-color: var(--white);
-  color: #23a6f0;
-  cursor:pointer;
+  background-color: var(--white-background);
+  color: var(--blue-button);
+
   font-weight: 700;
 }
 
 .footer-part-2 {
-  background-color: #252b42;
+  background-color: var(--dark-background);
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -659,13 +679,13 @@ header .banner {
 
 .footer-part-2 .footer-links h3,
 .footer-part-2 .footer-links a {
-  color: var(--white);
+  color: var(--white-background);
 }
 
 .f-contact {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: var(--white-background);
 }
 
 .footer-icon {
@@ -694,35 +714,169 @@ header .banner {
   display: flex;
 }
 
-/*
-@media (max-width: 768px){
-    .hamburger-menu {
-        width: 35px;
-        height: 30px;
-        position: fixed;
-        top: 50px;
-        right: 50px;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    
-    .line {
-        width: 100%;
-        height: 3px;
-        transition: all .8s;
-        background-color: white;
-    }
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .header-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--dark-background);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 45%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
 
-    header .header-menu{
-        display: block;
-        text-align: center;
-    }
+  .header-menu li {
+    opacity: 0;
+  }
 
-    .header-login-member{
-        visibility: hidden;
-    }
+  .burger {
+    display: block;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-405deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(405deg) translate(-5px, -6px);
+  }
+
+  .banner {
+    padding: 25px;
+    margin: 0;
+  }
+  .banner-buttons {
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .button-learn,
+  .button-get {
+    width: 100%;
+    text-align: center;
+  }
+
+  .industry-sections .text,
+  .banner-text,
+  .pricing-text,
+  .product-text {
+    padding: 15px;
+  }
+  .feedback-box {
+    margin: 20px 45px;
+    padding: 45px;
+  }
+
+  .view-project {
+    width: 300px;
+  }
+
+  .degrade {
+    width: 300px;
+  }
+
+  .container-packages .white-container {
+    width: 300px;
+    padding: 35px 5px;
+  }
+
+  .form-appointment {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .appointment-container h6,
+  .appointment-container h1 {
+    text-align: center;
+  }
+
+  .appointment-container form textarea {
+    width: 300px;
+    height: 200px;
+  }
+
+  .appointment-container form input,
+  .appointment-container form select,
+  .appointment-container form button {
+    width: 300px;
+    margin: 10px auto;
+  }
+
+  .footer-links {
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-*/ ;
+@media screen and (max-width: 325px) {
+  .appointment-container form textarea,
+  .appointment-container form input,
+  .appointment-container form select,
+  .appointment-container form button {
+    width: 250px;
+    margin: 10px auto;
+  }
+
+  .banner-text {
+    padding: 10px;
+  }
+  .banner {
+    padding: 5px;
+  }
+  .container-packages .white-container {
+    width: 250px;
+  }
+
+  .feedback-box .circle {
+    display: none;
+  }
+
+  .feedback-box {
+    margin: 10px;
+    padding: 25px;
+  }
+
+  .view-project {
+    width: 300px;
+  }
+
+  .degrade {
+    width: 300px;
+  }
+
+  .container-packages .white-container {
+    width: 300px;
+    padding: 35px 5px;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%); /*ao receber o click, o menu deve abrir*/
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
