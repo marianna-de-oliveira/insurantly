@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* FIRST PART */
@@ -53,7 +54,7 @@ header a {
   color: var(--white-background);
 }
 
-header .header-logo a {
+header .header-logo {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
@@ -139,6 +140,8 @@ header .banner {
 
 .banner-text {
   max-width: 500px;
+  border: 1px solid red;
+  margin-left: 25px;
 }
 
 .banner-text h1 {
@@ -715,29 +718,40 @@ header .banner {
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
   .header-menu {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
-    height: 100%;
+    height: 100vh;
+    width: 50%;
     background-color: var(--dark-background);
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    width: 45%;
+    justify-content: space-evenly;
+
     transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+    transition: 0.5s ease;
+    display: none;
+    z-index: 10;
   }
 
   .header-menu li {
     opacity: 0;
   }
 
+  .header-menu .header-logo {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
   .burger {
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 25px;
+    right: 60px;
     display: block;
+    z-index: 22;
   }
 
   .toggle .line1 {
@@ -756,6 +770,7 @@ header .banner {
     padding: 25px;
     margin: 0;
   }
+
   .banner-buttons {
     height: 125px;
     display: flex;
@@ -774,6 +789,10 @@ header .banner {
   .pricing-text,
   .product-text {
     padding: 15px;
+  }
+
+  .banner-text {
+    margin: 0;
   }
   .feedback-box {
     margin: 20px 45px;
