@@ -747,7 +747,7 @@ header .banner {
   }
 
   .toggle .line1 {
-    transform: rotate(-405deg) translate(-5px, 6px);
+    transform: rotate(-90deg) translate(-5px, 6px);
   }
 
   .toggle .line2 {
@@ -755,7 +755,7 @@ header .banner {
   }
 
   .toggle .line3 {
-    transform: rotate(405deg) translate(-5px, -6px);
+    transform: rotate(90deg) translate(-5px, -6px);
   }
 
   .banner {
